@@ -151,15 +151,11 @@ nav {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
-    max-height: 12%;
-    padding-top: 1rem;
-    z-index: 1;
-}
-body.scrolled nav {
     background-color: #ffffff;
-    padding-top: 0.5;
-    box-shadow: 0 0 0.1rem rgba(0,0,0,.14),0 0.1rem 0.2rem rgba(0,0,0,.28);
+    width: 100%;
+    max-height: 5rem;
+    padding-top: 0.5rem;
+    z-index: 1;
 }
 nav ul {
     list-style-type: none;
