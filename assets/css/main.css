@@ -93,4 +93,18 @@ body {
     border-radius: 100%;
     margin-right: -0.5rem;
 }
-
+.logo-brand h1 {
+    font-size: 1.25rem;
+    margin: 0;
+    padding-top: 0.75rem;
+}
+.logo-brand p {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+.logo-brand:hover,
+.logo-brand:focus {
+    color: var(--main-font-color);
+    text-decoration: none;
+    outline: 0;
+}
