@@ -108,3 +108,49 @@ body {
     text-decoration: none;
     outline: 0;
 }
+
+/* ---------- Navbar ---------- */
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 12%;
+    padding-top: 1rem;
+    z-index: 1;
+}
+body.scrolled nav {
+    background-color: #ffffff;
+    padding-top: 0.5;
+    box-shadow: 0 0 0.1rem rgba(0,0,0,.14),0 0.1rem 0.2rem rgba(0,0,0,.28);
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+nav li {
+    font-size: 1rem;
+    position: relative;
+    padding: 1rem 0 1rem;
+    color: var(--main-font-color);
+    outline: 0;
+    float: right;
+}
+nav li a {
+    display: block;
+    color: var(--main-font-color);
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-decoration: none;
+}
+nav li a:hover {
+    color: #A367CB;
+    border-bottom: 0.1rem solid #A367CB;
+}
