@@ -90,16 +90,16 @@ body {
     left: 50%;
     right: 50%;
     z-index: 999;
-    width: 5rem;
-    height: 5rem;
+    width: 7rem;
+    height: 7rem;
     margin: -2.5rem 0 0 -2.5rem;
-    border-bottom: 1rem solid #ADFFBE;
-    border-top: 1rem solid #99F0FF;
+    border-bottom: 0.5rem solid #ADFFBE;
+    border-top: 0.5rem solid #99F0FF;
     border-radius: 100%;
     -webkit-animation: rotate 1s linear infinite;
     animation: rotate 1s linear infinite;
 }
-#preloader-text {
+/* #preloader-text {
     position: absolute;
     top: 50%;
     bottom: 50%;
@@ -109,7 +109,7 @@ body {
     margin: 0.5rem 0 0 -1.8rem;
     font-family: fantasy;
     font-weight: bold;
-}
+} */
 
 /* ---------- Logo ---------- */
 .logo-brand {
