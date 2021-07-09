@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-    // document.getElementById("preloader").style.display = "none";
     fadeOut(document.getElementById("preloader"));
 });
 
