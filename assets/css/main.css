@@ -14,6 +14,39 @@ body {
         padding-left: var(--bs-gutter-x, 5rem);
     }
 }
+.parallax-lg {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-sm {
+    min-height: 30vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.btn-default, .btn-primary {
+    display: inline-block;
+    color: var(--main-font-color);
+    background-color: transparent;
+    padding: 0.8rem 2rem 0.8rem 2rem;
+    border: 0.15rem solid var(--main-font-color);
+    border-radius: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.6rem;
+}
+.btn-default:hover, .btn-primary:hover,
+.btn-default:focus, .btn-primary:focus {
+    color: var(--main-font-color);
+    background-color: transparent;
+    border: 0.15rem solid var(--main-font-color);
+    box-shadow: none;
+    text-decoration: none;
+    outline: 0;
+}
 
 /* ---------- Preloader ---------- */
 @keyframes rotate {
@@ -153,4 +186,24 @@ nav li a {
 nav li a:hover {
     color: #A367CB;
     border-bottom: 0.1rem solid #A367CB;
+}
+
+/* ---------- Banner ---------- */
+.banner {
+    background-image: url("../img/background_circle.png");
+}
+.banner div {
+    width: 40%;
+    color: var(--main-font-color);
+    padding-top: 18%;
+    margin-right: 44%;
+}
+.banner h2 {
+    font-size: 2.4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.banner p {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
 }
