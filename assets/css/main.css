@@ -2,6 +2,9 @@
 :root {
     --main-font-color: #2a2a2a;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     height: 100%;
     font-family: 'Raleway', sans-serif;
@@ -13,6 +16,12 @@ body {
         padding-right: var(--bs-gutter-x, 5rem);
         padding-left: var(--bs-gutter-x, 5rem);
     }
+}
+p {
+    text-align: justify;
+}
+#top, #about, #services, #contact {
+    scroll-margin-top: 7rem;
 }
 .parallax-lg {
     min-height: 100vh;
@@ -105,6 +114,7 @@ body {
 
 #preloader {
     position: fixed;
+    overflow-y: hidden;
     top: 0;
     bottom: 0;
     left: 0;
@@ -236,9 +246,13 @@ nav li a:hover {
 /* ---------- About ---------- */
 #about {
     padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 #about h2 {
     text-align: center;
+}
+#about div div p {
+    padding-right: 1rem;
 }
 blockquote {
     border-left: 0.2rem solid #cccccc;
@@ -252,6 +266,9 @@ blockquote span {
     vertical-align: top;
 }
 
+#progress-items {
+    margin-left: 1rem;
+}
 #progress-items h4 {
     font-size: 1rem;
     line-height: 1rem;
@@ -291,6 +308,7 @@ blockquote span {
 /* ---------- Services ---------- */
 #services {
     padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 #services h2 {
     text-align: center;
@@ -318,12 +336,20 @@ blockquote span {
     line-height: 2rem;
 }
 
+/* ---------- Contact ---------- */
+#contact {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
 
 /* ---------- Footer ---------- */
-#bottom {
+footer#bottom {
     padding: 25px 0;
+    width: 100%;
     color: #ffffff;
     background-color: var(--main-font-color);
+}
+.copyright {
     text-align: center;
 }
 .copyright a {
