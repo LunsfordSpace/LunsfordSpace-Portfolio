@@ -378,6 +378,17 @@ blockquote span {
     line-height: 1.6rem;
     margin: 1rem;
 }
+#contact hr {
+    margin: 3rem 0 4rem 0;
+}
+#contact input, #contact textarea {
+    margin: 0 0 1rem 0;
+}
+@media screen and (min-width: 768px) {
+    #contact hr {
+        display: none;
+    }
+}
 
 /* ---------- Footer ---------- */
 footer#bottom {
