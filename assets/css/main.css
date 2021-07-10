@@ -47,6 +47,32 @@ body {
     text-decoration: none;
     outline: 0;
 }
+.triple-underline {
+    display: inline-block;
+    position: relative;
+    width: 11rem;
+    margin: 0 0 2rem 0;
+}
+.triple-underline, .triple-underline::before, .triple-underline::after {
+    height: 0.01rem;
+    border-radius: 7px;
+    background-color: black;
+}
+.triple-underline::before, .triple-underline::after {
+    width: 8rem;
+    margin-left: 1.5rem;
+    content: "";
+    display: block;
+    position: absolute;
+}
+.triple-underline::before {
+    bottom: 130%;
+    margin-bottom: 0.3rem;
+}
+.triple-underline::after {
+    top: 130%;
+    margin-top: 0.3rem;
+}
 
 /* ---------- Preloader ---------- */
 @keyframes rotate {
@@ -122,7 +148,7 @@ body {
 }
 .logo-brand img {
     width: 3.5rem;
-    border: 0.1rem solid #808080;
+    border: 0.1rem solid var(--main-font-color);
     border-radius: 100%;
     margin-right: -0.5rem;
 }
@@ -202,4 +228,60 @@ nav li a:hover {
 .banner p {
     margin-top: 1.5rem;
     font-size: 1.5rem;
+}
+
+/* ---------- About ---------- */
+#about {
+    padding-top: 3rem;
+}
+#about h2 {
+    text-align: center;
+}
+blockquote {
+    background: #f9f9f9;
+    border-left: 0.2rem solid #cccccc;
+    margin: 1.5rem 1rem;
+    padding: 0.5rem 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+blockquote span {
+    color:#99F0FF;
+    vertical-align: top;
+}
+
+#progress-items h4 {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+#progress-items h4 {
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+}
+.progress {
+    background-color: #dadada;
+    height: 0.4rem;
+    margin-bottom: 1rem;
+    overflow: visible;
+}
+.progress-bar {
+    position: relative;
+    width: 5%;
+    background-color: var(--main-font-color);
+    overflow: visible;
+}
+.progress-bar span {
+    position: absolute;
+    background-color: var(--main-font-color);
+    top: -1.18rem;
+    right: 0.5rem;
+    border-radius: 25%;
+    transform: scale(1.5);
+    width: 2rem;
+    height: 1.25rem;
+}
+@media screen and (max-width: 991px) {
+    .progress-bar span {
+        display: none;
+    }
 }
