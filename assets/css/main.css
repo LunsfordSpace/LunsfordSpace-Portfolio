@@ -171,7 +171,7 @@ body {
 /* ---------- Navbar ---------- */
 nav {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 3fr 3fr 2fr;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -179,9 +179,18 @@ nav {
     right: 0;
     background-color: #ffffff;
     width: 100%;
-    max-height: 5rem;
-    padding-top: 0.5rem;
     z-index: 1;
+}
+.nav-solid {
+    max-height: 5rem;
+    padding-top: 0.4rem;
+    transition: 1s ease;
+}
+.nav-shadow {
+    max-height: 4.5rem;
+    padding-top: 0;
+    box-shadow: 0 0 0.2rem rgba(0,0,0,.10),0 0.2rem 0.5rem rgba(0,0,0,.30);
+    transition: 1s ease;
 }
 nav ul {
     list-style-type: none;

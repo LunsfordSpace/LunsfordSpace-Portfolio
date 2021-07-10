@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     fadeOut(document.getElementById("preloader"));
     progressBars();
+    navShadowStyle()
 });
 
 function fadeOut(element) {
@@ -14,6 +15,21 @@ function fadeOut(element) {
         opacity -= 0.2;
     }, 50);
 }
+
+function navShadowStyle() {
+    let nav = document.querySelector("nav");
+    let section = document.getElementById("top");
+    let observer = new IntersectionObserver(function (entry) {
+        if (entry[0].isIntersecting) {
+            nav.classList.add("nav-solid");
+            nav.classList.remove("nav-shadow");
+        } else {
+            nav.classList.add("nav-shadow");
+            nav.classList.remove("nav-solid");
+        }
+    });
+    observer.observe(section);
+};
 
 function progressBars() {
     let section = document.getElementById("progress-items");
@@ -33,10 +49,6 @@ function progressBars() {
             });
             observer.unobserve(section);
         }
-    }, {
-        root: null,
-        rootMargin: "0px 0px 0px 0px",
-        threshold: 0
     });
     observer.observe(section);
 };
