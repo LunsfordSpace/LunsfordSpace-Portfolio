@@ -45,7 +45,7 @@ p {
 .btn-default, .btn-primary {
     display: inline-block;
     color: var(--main-font-color);
-    background-color: transparent;
+    background-color: #ffffff;
     padding: 0.8rem 2rem 0.8rem 2rem;
     border: 0.15rem solid var(--main-font-color);
     border-radius: 0;
@@ -56,7 +56,7 @@ p {
 .btn-default:hover, .btn-primary:hover, .btn-social:hover,
 .btn-default:focus, .btn-primary:focus, .btn-social:focus {
     color: var(--main-font-color);
-    background-color: transparent;
+    background-color: #ffffff;
     border: 0.15rem solid var(--main-font-color);
     box-shadow: none;
     text-decoration: none;
@@ -174,11 +174,28 @@ p {
     text-decoration: none;
     outline: 0;
 }
+@media screen and (max-width: 950px) {
+    .logo-brand img {
+        width: 2.5rem;
+        margin-top: 0.5rem;
+    }
+}
+@media screen and (min-width: 950px) and (max-width: 1016px) {
+    .logo-brand img {
+        width: 2.8rem;
+        margin-top: -0.5rem;
+    }
+    .logo-brand h1 {
+        font-size: 1rem;
+    }
+    .logo-brand p {
+        font-size: 1rem;
+    }
+}
 
 /* ---------- Navbar ---------- */
 nav {
     display: grid;
-    grid-template-columns: 2fr 3fr 3fr 2fr;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -224,6 +241,31 @@ nav li a {
 nav li a:hover {
     color: #A367CB;
     border-bottom: 0.1rem solid #A367CB;
+}
+@media screen and (min-width: 950px) and (max-width: 1016px) {
+    nav {
+        grid-template-columns: 1fr 3fr 3fr 1fr;
+    }
+    .nav-solid {
+        max-height: 4rem;
+        padding-top: 0rem;
+    }
+    .nav-shadow {
+        max-height: 3.5rem;
+    }
+    nav li {
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 1270px) {
+    nav {
+        grid-template-columns: 1fr 3fr 3fr 1fr;
+    }
+}
+@media screen and (min-width: 1270px) {
+    nav {
+        grid-template-columns: 2fr 3fr 3fr 2fr;
+    }
 }
 
 /* ---------- Banner ---------- */
@@ -360,6 +402,9 @@ blockquote span {
 #contact {
     padding-top: 3rem;
     padding-bottom: 3rem;
+}
+#contact h2 {
+    text-align: center;
 }
 .social {
     display: flex;
