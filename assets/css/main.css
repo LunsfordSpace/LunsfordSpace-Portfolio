@@ -21,11 +21,17 @@ body {
     background-size: cover;
 }
 .parallax-sm {
-    min-height: 30vh;
+    min-height: 40vh;
     width: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.circle-banner {
+    background-image: url("../img/background_circle.png");
+}
+.coffee-banner {
+    background-image: url("../img/background_coffee.jpg");
 }
 .btn-default, .btn-primary {
     display: inline-block;
@@ -282,4 +288,17 @@ blockquote span {
     .progress-bar span {
         display: none;
     }
+}
+
+/* ---------- Footer ---------- */
+#bottom {
+    padding: 25px 0;
+    color: #ffffff;
+    background-color: var(--main-font-color);
+    text-align: center;
+}
+.copyright a {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
 }
