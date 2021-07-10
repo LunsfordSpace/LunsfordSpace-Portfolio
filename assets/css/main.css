@@ -172,16 +172,17 @@ nav {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #ffffff;
     width: 100%;
     z-index: 1;
 }
 .nav-solid {
+    background-color: #ffffff;
     max-height: 5rem;
     padding-top: 0.4rem;
     transition: 1s ease;
 }
 .nav-shadow {
+    background-color: #eeeeee;
     max-height: 4.5rem;
     padding-top: 0;
     box-shadow: 0 0 0.2rem rgba(0,0,0,.10),0 0.2rem 0.5rem rgba(0,0,0,.30);
@@ -190,7 +191,7 @@ nav {
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0.3rem 0;
     overflow: hidden;
 }
 nav li {
@@ -301,4 +302,32 @@ blockquote span {
     color: #ffffff;
     font-weight: 700;
     text-decoration: none;
+}
+.backToTop {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    min-width: 3rem;
+    padding: 6px 0 8px;
+    background-color: #eeeeee;
+    font-size: 2rem;
+    line-height: 0;
+    text-align: center;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+.backToTop-hidden {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    min-width: 3rem;
+    padding: 6px 0 8px;
+    background-color: #eeeeee;
+    font-size: 2rem;
+    line-height: 0;
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s ease;
 }

@@ -18,13 +18,16 @@ function fadeOut(element) {
 
 function navShadowStyle() {
     let nav = document.querySelector("nav");
+    let backToTop = document.getElementById("backToTop");
     let section = document.getElementById("top");
     let observer = new IntersectionObserver(function (entry) {
         if (entry[0].isIntersecting) {
             nav.classList.add("nav-solid");
             nav.classList.remove("nav-shadow");
+            backToTop.classList.add("backToTop-hidden");
         } else {
             nav.classList.add("nav-shadow");
+            backToTop.classList.remove("backToTop-hidden");
             nav.classList.remove("nav-solid");
         }
     });
