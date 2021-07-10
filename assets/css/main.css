@@ -53,14 +53,17 @@ p {
     font-weight: 700;
     line-height: 1.6rem;
 }
-.btn-default:hover, .btn-primary:hover,
-.btn-default:focus, .btn-primary:focus {
+.btn-default:hover, .btn-primary:hover, .btn-social:hover,
+.btn-default:focus, .btn-primary:focus, .btn-social:focus {
     color: var(--main-font-color);
     background-color: transparent;
     border: 0.15rem solid var(--main-font-color);
     box-shadow: none;
     text-decoration: none;
     outline: 0;
+}
+.btn-default:active, .btn-primary:active, .btn-social:active {
+    box-shadow: 1px 1px 1px 1px #888888;
 }
 .triple-underline, .triple-underline::before, .triple-underline::after {
     border: 1px solid var(--main-font-color);
@@ -242,6 +245,24 @@ nav li a:hover {
     margin-top: 1.5rem;
     font-size: 1.5rem;
 }
+@media screen and (max-width: 767px) {
+    .banner {
+        background-position-x: 25%;
+    }
+    .banner div {
+        width: 60%;
+        color: var(--main-font-color);
+        padding-top: 40%;
+        margin-right: 20%;
+    }
+    .banner h2 {
+        font-size: 1.6rem;
+        margin-top: 4rem;
+    }
+    .banner p {
+        font-size: 1rem;
+    }
+}
 
 /* ---------- About ---------- */
 #about {
@@ -264,10 +285,6 @@ blockquote {
 blockquote span {
     color:#99F0FF;
     vertical-align: top;
-}
-
-#progress-items {
-    margin-left: 1rem;
 }
 #progress-items h4 {
     font-size: 1rem;
@@ -299,6 +316,11 @@ blockquote span {
     width: 2rem;
     height: 1.25rem;
 }
+@media screen and (min-width: 991px) {
+    #progress-items {
+        margin-left: 1rem;
+    }
+}
 @media screen and (max-width: 991px) {
     .progress-bar span {
         display: none;
@@ -313,33 +335,48 @@ blockquote span {
 #services h2 {
     text-align: center;
 }
-.services-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 2rem;
-    column-gap: 2rem;
-    margin-bottom: 2rem;
+#services div {
+    padding: 1rem;
 }
-.services-grid i {
+#services i {
     width: 2rem;
     font-size: 2rem;
     line-height: 0;
     text-align: center;
 }
-.services-grid p {
-    margin-left: 3rem;
-}
-.services-grid h3 {
+#services h3 {
     margin-top: 0;
     font-weight: 300;
     font-size: 1.5rem;
     line-height: 2rem;
+}
+@media screen and (min-width: 1400px) {
+    #services p {
+        margin: 0 1rem 3rem 3rem;
+    }
 }
 
 /* ---------- Contact ---------- */
 #contact {
     padding-top: 3rem;
     padding-bottom: 3rem;
+}
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.btn-social {
+    display: inline-block;
+    color: var(--main-font-color);
+    background-color: transparent;
+    padding: 0.3rem 6rem 0.3rem 6rem;
+    border: 0.15rem solid var(--main-font-color);
+    border-radius: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.6rem;
+    margin: 1rem;
 }
 
 /* ---------- Footer ---------- */
