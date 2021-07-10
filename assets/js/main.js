@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     fadeOut(document.getElementById("preloader"));
     progressBars();
-    navShadowStyle()
+    navShadowStyle();
 });
 
 function fadeOut(element) {

@@ -53,31 +53,30 @@ body {
     text-decoration: none;
     outline: 0;
 }
+.triple-underline, .triple-underline::before, .triple-underline::after {
+    border: 1px solid var(--main-font-color);
+}
 .triple-underline {
     display: inline-block;
     position: relative;
     width: 11rem;
     margin: 0 0 2rem 0;
-}
-.triple-underline, .triple-underline::before, .triple-underline::after {
-    height: 0.01rem;
-    border-radius: 7px;
-    background-color: black;
+    opacity: 0.4;
 }
 .triple-underline::before, .triple-underline::after {
     width: 8rem;
     margin-left: 1.5rem;
-    content: "";
+    content: " ";
     display: block;
     position: absolute;
 }
 .triple-underline::before {
     bottom: 130%;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.25rem;
 }
 .triple-underline::after {
     top: 130%;
-    margin-top: 0.3rem;
+    margin-top: 0.25rem;
 }
 
 /* ---------- Preloader ---------- */
@@ -172,17 +171,16 @@ nav {
     bottom: 0;
     left: 0;
     right: 0;
+    background-color: #ffffff;
     width: 100%;
     z-index: 1;
 }
 .nav-solid {
-    background-color: #ffffff;
     max-height: 5rem;
     padding-top: 0.4rem;
     transition: 1s ease;
 }
 .nav-shadow {
-    background-color: #eeeeee;
     max-height: 4.5rem;
     padding-top: 0;
     box-shadow: 0 0 0.2rem rgba(0,0,0,.10),0 0.2rem 0.5rem rgba(0,0,0,.30);
@@ -243,7 +241,6 @@ nav li a:hover {
     text-align: center;
 }
 blockquote {
-    background: #f9f9f9;
     border-left: 0.2rem solid #cccccc;
     margin: 1.5rem 1rem;
     padding: 0.5rem 1rem;
@@ -290,6 +287,37 @@ blockquote span {
         display: none;
     }
 }
+
+/* ---------- Services ---------- */
+#services {
+    padding-top: 3rem;
+}
+#services h2 {
+    text-align: center;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    margin-bottom: 2rem;
+}
+.services-grid i {
+    width: 45px;
+    font-size: 38px;
+    line-height: 0;
+    text-align: center;
+}
+.services-grid p {
+    margin-left: 3rem;
+}
+.services-grid h3 {
+    margin-top: 0;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
 
 /* ---------- Footer ---------- */
 #bottom {
