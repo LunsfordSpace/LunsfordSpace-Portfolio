@@ -2,8 +2,10 @@
 :root {
     --primary-color: #2a2a2a;
     --secondary-color: #eeeeee;
-    --green: #ADFFBE;
-    --blue: #99F0FF;
+    --pale-green: #ADFFBE;
+    --pale-blue: #99F0FF;
+    --green: #79ff94;
+    --blue: #70eaff;
 }
 html {
     scroll-behavior: smooth;
@@ -28,6 +30,12 @@ body {
 .darken-image {
     filter: brightness(50%);
     transition: 1s ease;
+}
+.green {
+    color: var(--green);
+}
+.blue {
+    color: var(--blue);
 }
 #top, #about, #services, #contact {
     scroll-margin-top: 7rem;
@@ -146,8 +154,8 @@ body {
     width: 7rem;
     height: 7rem;
     margin: -2.5rem 0 0 -2.5rem;
-    border-bottom: 0.5rem solid var(--green);
-    border-top: 0.5rem solid var(--blue);
+    border-bottom: 0.5rem solid var(--pale-green);
+    border-top: 0.5rem solid var(--pale-blue);
     border-radius: 100%;
     -webkit-animation: rotate 1s linear infinite;
     animation: rotate 1s linear infinite;
@@ -265,7 +273,12 @@ nav li a:hover {
     font-size: 1.5rem;
     border-radius: 20%;
 }
-@media screen and (min-width: 1780px) {
+@media screen and (min-width: 2400px) {
+    nav {
+        padding: 0rem 30rem;
+    }
+}
+@media screen and (min-width: 1780px) and (max-width: 2400px) {
     nav {
         padding: 0rem 25rem;
     }
@@ -448,9 +461,6 @@ nav li a:hover {
 }
 
 /* ---------- Banner ---------- */
-.banner {
-    background-image: url("../img/background_circle.png");
-}
 .banner div {
     width: 40%;
     color: var(--primary-color);
@@ -537,7 +547,7 @@ blockquote span {
     margin-bottom: 0.2rem;
 }
 .progress {
-    background-color: #afafaf;
+    background-color: #888888;
     height: 0.4rem;
     margin-bottom: 1rem;
     overflow: visible;
