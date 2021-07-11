@@ -1,6 +1,7 @@
 /* ---------- General ---------- */
 :root {
-    --main-font-color: #2a2a2a;
+    --primary-color: #2a2a2a;
+    --secondary-color: #eeeeee;
 }
 html {
     scroll-behavior: smooth;
@@ -9,13 +10,22 @@ body {
     height: 100%;
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
-    color: var(--main-font-color);
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    transition: 1s ease;
 }
 @media screen and (min-width: 991px) {
     .wrapper {
-        padding-right: var(--bs-gutter-x, 5rem);
-        padding-left: var(--bs-gutter-x, 5rem);
+        padding-right: 5rem;
+        padding-left: 5rem;
     }
+}
+.hidden {
+    display: none;
+}
+.darken-image {
+    filter: brightness(50%);
+    transition: 1s ease;
 }
 p {
     text-align: justify;
@@ -44,10 +54,10 @@ p {
 }
 .btn-default, .btn-primary {
     display: inline-block;
-    color: var(--main-font-color);
-    background-color: #ffffff;
+    color: var(--primary-color);
+    background-color: transparent;
     padding: 0.8rem 2rem 0.8rem 2rem;
-    border: 0.15rem solid var(--main-font-color);
+    border: 0.15rem solid var(--primary-color);
     border-radius: 0;
     font-size: 1rem;
     font-weight: 700;
@@ -55,9 +65,9 @@ p {
 }
 .btn-default:hover, .btn-primary:hover, .btn-social:hover,
 .btn-default:focus, .btn-primary:focus, .btn-social:focus {
-    color: var(--main-font-color);
-    background-color: #ffffff;
-    border: 0.15rem solid var(--main-font-color);
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 0.15rem solid var(--primary-color);
     box-shadow: none;
     text-decoration: none;
     outline: 0;
@@ -66,7 +76,7 @@ p {
     box-shadow: 1px 1px 1px 1px #888888;
 }
 .triple-underline, .triple-underline::before, .triple-underline::after {
-    border: 1px solid var(--main-font-color);
+    border: 1px solid var(--primary-color);
 }
 .triple-underline {
     display: inline-block;
@@ -147,7 +157,7 @@ p {
 /* ---------- Logo ---------- */
 .logo-brand {
     display: inline-block;
-    color: var(--main-font-color);
+    color: var(--primary-color);
     text-decoration: none;
     padding-right: 1rem;
     display: table-cell;
@@ -155,7 +165,7 @@ p {
 }
 .logo-brand img {
     width: 3.5rem;
-    border: 0.1rem solid var(--main-font-color);
+    border: 0.1rem solid #2a2a2a;
     border-radius: 100%;
     margin-right: -0.5rem;
 }
@@ -170,7 +180,7 @@ p {
 }
 .logo-brand:hover,
 .logo-brand:focus {
-    color: var(--main-font-color);
+    color: var(--primary-color);
     text-decoration: none;
     outline: 0;
 }
@@ -201,17 +211,18 @@ nav {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #ffffff;
     width: 100%;
     z-index: 1;
 }
 .nav-solid {
     max-height: 5rem;
+    background-color: transparent;
     padding-top: 0.4rem;
     transition: 1s ease;
 }
 .nav-shadow {
     max-height: 4.5rem;
+    background-color: var(--secondary-color);
     padding-top: 0;
     box-shadow: 0 0 0.2rem rgba(0,0,0,.10),0 0.2rem 0.5rem rgba(0,0,0,.30);
     transition: 1s ease;
@@ -226,13 +237,13 @@ nav li {
     font-size: 1rem;
     position: relative;
     padding: 1rem 0 1rem;
-    color: var(--main-font-color);
+    color: var(--primary-color);
     outline: 0;
     float: right;
 }
 nav li a {
     display: block;
-    color: var(--main-font-color);
+    color: var(--primary-color);
     text-align: center;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -241,6 +252,14 @@ nav li a {
 nav li a:hover {
     color: #A367CB;
     border-bottom: 0.1rem solid #A367CB;
+}
+#day-mode, #night-mode {
+    margin-top: -0.5rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+#day-mode button, #night-mode button {
+    border-radius: 20%;
 }
 @media screen and (min-width: 950px) and (max-width: 1016px) {
     nav {
@@ -274,7 +293,7 @@ nav li a:hover {
 }
 .banner div {
     width: 40%;
-    color: var(--main-font-color);
+    color: var(--primary-color);
     padding-top: 18%;
     margin-right: 44%;
 }
@@ -293,7 +312,7 @@ nav li a:hover {
     }
     .banner div {
         width: 60%;
-        color: var(--main-font-color);
+        color: var(--primary-color);
         padding-top: 40%;
         margin-right: 20%;
     }
@@ -337,7 +356,7 @@ blockquote span {
     margin-bottom: 0.2rem;
 }
 .progress {
-    background-color: #dadada;
+    background-color: #99F0FF;
     height: 0.4rem;
     margin-bottom: 1rem;
     overflow: visible;
@@ -345,12 +364,12 @@ blockquote span {
 .progress-bar {
     position: relative;
     width: 5%;
-    background-color: var(--main-font-color);
+    background-color: var(--primary-color);
     overflow: visible;
 }
 .progress-bar span {
     position: absolute;
-    background-color: var(--main-font-color);
+    background-color: var(--primary-color);
     top: -1.18rem;
     right: 0.5rem;
     border-radius: 25%;
@@ -413,10 +432,10 @@ blockquote span {
 }
 .btn-social {
     display: inline-block;
-    color: var(--main-font-color);
+    color: var(--primary-color);
     background-color: transparent;
     padding: 0.3rem 6rem 0.3rem 6rem;
-    border: 0.15rem solid var(--main-font-color);
+    border: 0.15rem solid var(--primary-color);
     border-radius: 0;
     font-size: 2rem;
     font-weight: 700;
@@ -427,6 +446,8 @@ blockquote span {
     margin: 3rem 0 4rem 0;
 }
 #contact input, #contact textarea {
+    color: #2a2a2a;
+    background-color: #eeeeee;
     margin: 0 0 1rem 0;
 }
 @media screen and (min-width: 768px) {
@@ -439,14 +460,14 @@ blockquote span {
 footer#bottom {
     padding: 25px 0;
     width: 100%;
-    color: #ffffff;
-    background-color: var(--main-font-color);
+    color: #eeeeee;
+    background-color: #2a2a2a;
 }
 .copyright {
     text-align: center;
 }
 .copyright a {
-    color: #ffffff;
+    color: #eeeeee;
     font-weight: 700;
     text-decoration: none;
 }
@@ -456,7 +477,8 @@ footer#bottom {
     bottom: 2rem;
     min-width: 3rem;
     padding: 6px 0 8px;
-    background-color: #eeeeee;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
     font-size: 2rem;
     line-height: 0;
     text-align: center;
@@ -470,11 +492,16 @@ footer#bottom {
     bottom: 2rem;
     min-width: 3rem;
     padding: 6px 0 8px;
-    background-color: #eeeeee;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
     font-size: 2rem;
     line-height: 0;
     text-align: center;
     z-index: 1;
     opacity: 0;
     transition: opacity 1s ease;
+}
+.backToTop:hover, .backToTop:focus, .backToTop:active {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
 }

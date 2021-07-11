@@ -2,7 +2,42 @@ document.addEventListener("DOMContentLoaded", (event) => {
     fadeOut(document.getElementById("preloader"));
     progressBars();
     navShadowStyle();
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        switchMode();
+    }
+    let modeButtons = document.querySelectorAll("button.mode-toggle");
+    modeButtons.forEach(function(element) {
+        element.addEventListener('click', () => {
+            switchMode();
+        });
+    });
 });
+
+let mode = "day-mode";
+
+function switchMode() {
+    let root = document.querySelector(":root");
+    let coffeeBanners = document.querySelectorAll(".coffee-banner");
+    if(mode === "day-mode") {
+        root.style.setProperty("--primary-color", "#eeeeee");
+        root.style.setProperty("--secondary-color", "#2a2a2a");
+        document.getElementById("day-mode").classList.remove("hidden");
+        document.getElementById("night-mode").classList.add("hidden");
+        coffeeBanners.forEach(function(element) {
+            element.classList.add("darken-image");
+        });
+        mode = "night-mode";
+    } else {
+        root.style.setProperty("--primary-color", "#2a2a2a");
+        root.style.setProperty("--secondary-color", "#eeeeee");
+        document.getElementById("day-mode").classList.add("hidden");
+        document.getElementById("night-mode").classList.remove("hidden");
+        coffeeBanners.forEach(function (element) {
+            element.classList.remove("darken-image");
+        });
+        mode = "day-mode";
+    }
+}
 
 function fadeOut(element) {
     let opacity = 1;
