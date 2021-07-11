@@ -181,28 +181,9 @@ body {
     text-decoration: none;
     outline: 0;
 }
-@media screen and (max-width: 950px) {
-    .logo-brand img {
-        width: 2.5rem;
-        margin-top: 0.5rem;
-    }
-}
-@media screen and (min-width: 950px) and (max-width: 1016px) {
-    .logo-brand img {
-        width: 2.8rem;
-        margin-top: -0.5rem;
-    }
-    .logo-brand h1 {
-        font-size: 1rem;
-    }
-    .logo-brand p {
-        font-size: 1rem;
-    }
-}
 
 /* ---------- Navbar ---------- */
 nav {
-    display: grid;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -250,17 +231,59 @@ nav li a:hover {
     color: #A367CB;
     border-bottom: 0.1rem solid #A367CB;
 }
-#day-mode, #night-mode {
-    margin-top: -0.5rem;
-    font-size: 1.5rem;
-    padding: 1rem;
+#nav-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    align-self: center;
+    vertical-align: middle;
 }
-#day-mode button, #night-mode button {
+#nav-hamburger, #day-mode, #night-mode {
+    height: 2.5rem;
+    min-width: 3rem;
+    margin-bottom: 0.25rem;
+    margin-right: 1rem;
+    font-size: 1.5rem;
     border-radius: 20%;
 }
-@media screen and (min-width: 950px) and (max-width: 1016px) {
+@media screen and (min-width: 1780px) {
     nav {
-        grid-template-columns: 1fr 3fr 3fr 1fr;
+        padding: 0rem 25rem;
+    }
+}
+@media screen and (min-width: 1600px) and (max-width: 1780px) {
+    nav {
+        padding: 0rem 20rem;
+    }
+}
+@media screen and (min-width: 1450px) and (max-width: 1600px) {
+    nav {
+        padding: 0rem 15rem;
+    }
+}
+@media screen and (min-width: 1280px) and (max-width: 1450px) {
+    nav {
+        padding: 0rem 10rem;
+    }
+}
+@media screen and (min-width: 1150px) and (max-width: 1280px) {
+    nav {
+        padding: 0rem 6rem;
+    }
+}
+@media screen and (min-width: 991px) and (max-width: 1150px) {
+    .logo-brand img {
+        width: 2.8rem;
+        margin-top: -0.5rem;
+    }
+    .logo-brand h1 {
+        font-size: 1rem;
+    }
+    .logo-brand p {
+        font-size: 1rem;
+    }
+    nav {
+        padding: 3rem;
     }
     .nav-solid {
         max-height: 4rem;
@@ -273,14 +296,76 @@ nav li a:hover {
         font-size: 0.9rem;
     }
 }
-@media screen and (max-width: 1270px) {
-    nav {
-        grid-template-columns: 1fr 3fr 3fr 1fr;
+@media screen and (min-width: 991px) {
+    #nav-hamburger {
+        display: none;
     }
 }
-@media screen and (min-width: 1270px) {
+@media screen and (min-width: 566px) and (max-width: 991px) {
     nav {
-        grid-template-columns: 2fr 3fr 3fr 2fr;
+        padding: 3rem;
+    }
+    .nav-solid {
+        max-height: 4rem;
+        padding-top: 0rem;
+    }
+    .nav-shadow {
+        max-height: 3.5rem;
+    }
+    .logo-brand img {
+        width: 2.8rem;
+        margin-top: -0.5rem;
+    }
+    .logo-brand h1 {
+        font-size: 1rem;
+    }
+    .logo-brand p {
+        font-size: 1rem;
+    }
+    .nav-solid {
+        max-height: 4rem;
+        padding-top: 0rem;
+    }
+    .nav-shadow {
+        max-height: 3.5rem;
+    }
+    #nav-menu {
+        display: none;
+    }
+}
+@media screen and (max-width: 566px) {
+    nav {
+        padding: 1rem;
+    }
+    .nav-solid {
+        max-height: 4rem;
+        padding-top: 0rem;
+    }
+    .nav-shadow {
+        max-height: 3.5rem;
+    }
+    .logo-brand {
+        max-width: 50%;
+    }
+    .logo-brand img {
+        width: 2.8rem;
+        margin-top: -0.5rem;
+    }
+    .logo-brand h1 {
+        font-size: 1rem;
+    }
+    .logo-brand p {
+        font-size: 0.7rem;
+    }
+    .nav-solid {
+        max-height: 4rem;
+        padding-top: 0rem;
+    }
+    .nav-shadow {
+        max-height: 3.5rem;
+    }
+    #nav-menu {
+        display: none;
     }
 }
 

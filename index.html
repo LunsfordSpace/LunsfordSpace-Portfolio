@@ -16,9 +16,8 @@
     <div id="preloader">
         <div id="preloader-spin"></div>
     </div>
-    <nav class="nav-solid">
-        <span></span>
-        <div>
+    <nav class="nav-solid row">
+        <div class="col-lg-5 col-md-10 col-sm-9 col-8">
             <a class="logo-brand" href="#">
                 <img src="assets/img/profile-art-logo.png" alt="An artistic profile logo of Shawn Lunsford.">
             </a>
@@ -27,15 +26,19 @@
                 <p><strong>AGILE COACH</strong> || PROJECT MANAGER</p>
             </a>
         </div>
-        <ul class="AnimateScroll">
-            <li id="day-mode" class="nav-item hidden"><button class="mode-toggle" title="Click for night mode."><i class="fa fa-sun"></i></button></li>
-            <li id="night-mode" class="nav-item"><button class="mode-toggle" title="Click for day mode."><i class="fa fa-moon"></i></button></li>
-            <li class="nav-item"><a href="#contact">CONTACT</a></li>
-            <li class="nav-item"><a href="#services">SERVICES</a></li>
-            <li class="nav-item"><a href="#about">ABOUT</a></li>
-            <li class="nav-item"><a href="#top">HOME</a></li>
-        </ul>
-        <span></span>
+        <div id="nav-menu" class="col-lg-6">
+            <ul>
+                <li class="nav-item"><a href="#contact">CONTACT</a></li>
+                <li class="nav-item"><a href="#services">SERVICES</a></li>
+                <li class="nav-item"><a href="#about">ABOUT</a></li>
+                <li class="nav-item"><a href="#top">HOME</a></li>
+            </ul>
+        </div>
+        <div id="nav-buttons" class="col-lg-1 col-md-2 col-sm-3 col-4">
+            <button id="nav-hamburger" data-toggle="collapse" data-target="#nav-menu" aria-controls="nav-menu"><i class="fas fa-bars"></i></button>
+            <button id="day-mode" class="mode-toggle hidden" title="Click for night mode."><i class="fa fa-sun"></i></button>
+            <button id="night-mode" class="mode-toggle" title="Click for day mode."><i class="fa fa-moon"></i></button>
+        </div>
     </nav>
     <div class="banner parallax-lg">
         <div class="wrapper container">
