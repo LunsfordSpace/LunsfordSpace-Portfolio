@@ -2,6 +2,8 @@
 :root {
     --primary-color: #2a2a2a;
     --secondary-color: #eeeeee;
+    --green: #ADFFBE;
+    --blue: #99F0FF;
 }
 html {
     scroll-behavior: smooth;
@@ -144,8 +146,8 @@ body {
     width: 7rem;
     height: 7rem;
     margin: -2.5rem 0 0 -2.5rem;
-    border-bottom: 0.5rem solid #ADFFBE;
-    border-top: 0.5rem solid #99F0FF;
+    border-bottom: 0.5rem solid var(--green);
+    border-top: 0.5rem solid var(--blue);
     border-radius: 100%;
     -webkit-animation: rotate 1s linear infinite;
     animation: rotate 1s linear infinite;
@@ -202,7 +204,7 @@ nav {
     max-height: 4.5rem;
     background-color: var(--secondary-color);
     padding-top: 0;
-    box-shadow: 0 0 0.2rem rgba(0,0,0,.10),0 0.2rem 0.5rem rgba(0,0,0,.30);
+    box-shadow: 0 0 0.2rem rgba(0,0,0,.20),0 0.2rem 0.5rem rgba(0,0,0,.50);
     transition: 1s ease;
 }
 nav ul {
@@ -230,10 +232,14 @@ nav li a:hover {
     color: #A367CB;
     border-bottom: 0.1rem solid #A367CB;
 }
+.dropdown-menu {
+    border-radius: 5%
+}
 .dropdown-item {
     background-color: var(--secondary-color);
     color:var(--primary-color);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    padding: 1rem;
 }
 .dropdown-item:hover {
     background-color: var(--secondary-color);
@@ -460,7 +466,28 @@ nav li a:hover {
     margin-top: 1.5rem;
     font-size: 1.5rem;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 1200px) and (max-width: 1590px) {
+    .banner h2 {
+        font-size: 2.2rem;
+        margin-top: 4rem;
+    }
+}
+@media screen and (min-width: 630px) and (max-width: 1200px) {
+    .banner div {
+        width: 70%;
+        color: var(--primary-color);
+        padding-top: 23%;
+        margin-right: 15%;
+    }
+    .banner h2 {
+        font-size: 2rem;
+        margin-top: 4rem;
+    }
+    .banner p {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width: 630px) {
     .banner {
         background-position-x: 25%;
     }
@@ -510,7 +537,7 @@ blockquote span {
     margin-bottom: 0.2rem;
 }
 .progress {
-    background-color: #00d9ff;
+    background-color: #afafaf;
     height: 0.4rem;
     margin-bottom: 1rem;
     overflow: visible;
