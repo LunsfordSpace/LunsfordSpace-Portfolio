@@ -27,9 +27,6 @@ body {
     filter: brightness(50%);
     transition: 1s ease;
 }
-p {
-    text-align: justify;
-}
 #top, #about, #services, #contact {
     scroll-margin-top: 7rem;
 }
