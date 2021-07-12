@@ -211,14 +211,14 @@ nav {
     max-height: 5rem;
     background-color: transparent;
     padding-top: 0.4rem;
-    transition: 2s ease;
+    transition: 1s ease;
 }
 .nav-shadow {
     max-height: 4.5rem;
     background-color: var(--secondary-color);
     padding-top: 0;
     box-shadow: 0 0 0.2rem rgba(0,0,0,.20),0 0.2rem 0.5rem rgba(0,0,0,.50);
-    transition: 2s ease;
+    transition: 1s ease;
 }
 nav ul {
     list-style-type: none;
