@@ -29,21 +29,23 @@ function switchMode(mode) {
     if(mode === "day-mode") {
         root.style.setProperty("--primary-color", "#eeeeee");
         root.style.setProperty("--secondary-color", "#2a2a2a");
-        root.style.setProperty("--secondary-contrast-color", "#2c2c2c");
+        root.style.setProperty("--secondary-contrast-color", "#2f2f2f");
         document.getElementById("day-mode").classList.remove("hidden");
         document.getElementById("night-mode").classList.add("hidden");
         coffeeBanners.forEach(function(element) {
+            element.classList.remove("lighten-image");
             element.classList.add("darken-image");
         });
         globalMode = "night-mode";
     } else {
         root.style.setProperty("--primary-color", "#2a2a2a");
         root.style.setProperty("--secondary-color", "#eeeeee");
-        root.style.setProperty("--secondary-contrast-color", "#f1f1f1");
+        root.style.setProperty("--secondary-contrast-color", "#f3f3f3");
         document.getElementById("day-mode").classList.add("hidden");
         document.getElementById("night-mode").classList.remove("hidden");
         coffeeBanners.forEach(function (element) {
             element.classList.remove("darken-image");
+            element.classList.add("lighten-image");
         });
         globalMode = "day-mode";
     }
