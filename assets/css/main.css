@@ -599,6 +599,7 @@ blockquote span {
     margin-bottom: 1.5rem;
 }
 #resume .col-md-6 {
+    padding-bottom: 1rem;
     overflow: hidden;
 }
 .resume-item {
@@ -686,8 +687,15 @@ blockquote span {
     transition: 2s ease;
 }
 @media screen and (min-width: 768px) {
+    #contact {
+        box-shadow: -50vw 0 0 0 var(--secondary-contrast-color) inset;
+        transition: 2s ease;
+    }
     #contact hr {
         display: none;
+    }
+    #contact form {
+        padding-left: 4rem;
     }
 }
 
