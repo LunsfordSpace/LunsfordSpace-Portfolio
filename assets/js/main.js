@@ -2,11 +2,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     fadeOut(document.getElementById("preloader"));
     progressBars();
     navShadowStyle();
-    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches && window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches && window.matchMedia("(prefers-color-scheme)").media !== "not all") {
         switchMode(globalMode);
     }
     window.matchMedia("(prefers-color-scheme: dark)").onchange = function () {
-        if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches && window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+        if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches && window.matchMedia("(prefers-color-scheme)").media !== "not all") {
             globalMode = "day-mode";
         } else {
             globalMode = "night-mode";
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     };
     let modeButtons = document.querySelectorAll("button.mode-toggle");
     modeButtons.forEach(function(element) {
-        element.addEventListener('click', () => {
+        element.addEventListener("click", () => {
             switchMode(globalMode);
         });
     });
