@@ -29,6 +29,7 @@ function switchMode(mode) {
     if(mode === "day-mode") {
         root.style.setProperty("--primary-color", "#eeeeee");
         root.style.setProperty("--secondary-color", "#2a2a2a");
+        root.style.setProperty("--secondary-contrast-color", "#2c2c2c");
         document.getElementById("day-mode").classList.remove("hidden");
         document.getElementById("night-mode").classList.add("hidden");
         coffeeBanners.forEach(function(element) {
@@ -38,6 +39,7 @@ function switchMode(mode) {
     } else {
         root.style.setProperty("--primary-color", "#2a2a2a");
         root.style.setProperty("--secondary-color", "#eeeeee");
+        root.style.setProperty("--secondary-contrast-color", "#f1f1f1");
         document.getElementById("day-mode").classList.add("hidden");
         document.getElementById("night-mode").classList.remove("hidden");
         coffeeBanners.forEach(function (element) {

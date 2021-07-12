@@ -2,6 +2,7 @@
 :root {
     --primary-color: #2a2a2a;
     --secondary-color: #eeeeee;
+    --secondary-contrast-color: #f1f1f1;
     --pale-green: #ADFFBE;
     --pale-blue: #99F0FF;
     --green: #79ff94;
@@ -519,7 +520,6 @@ nav li a:hover {
 /* ---------- About ---------- */
 #about {
     padding-top: 3rem;
-    padding-bottom: 3rem;
 }
 #about h2 {
     text-align: center;
@@ -576,6 +576,39 @@ blockquote span {
 @media screen and (max-width: 991px) {
     .progress-bar span {
         display: none;
+    }
+}
+
+/* ---------- Resume ---------- */
+#resume {
+    padding-bottom: 3rem;
+}
+#resume h3 {
+    margin-bottom: 1rem;
+}
+#resume hr {
+    width: 66%;
+    margin-left: 33%;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+#resume .col-md-6 {
+    overflow: hidden;
+}
+.resume-item {
+    margin: 0 2rem;
+    padding: 2rem;
+    padding-bottom: 99rem;
+    margin-bottom: -99rem;
+    background-color: var(--secondary-contrast-color);
+    transition: 1s ease;
+}
+.resume-item h6 {
+    padding-right: 1rem;
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+    .resume-item h6 {
+        font-size: 0.8rem;
     }
 }
 
