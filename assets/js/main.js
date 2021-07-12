@@ -2,20 +2,28 @@ document.addEventListener("DOMContentLoaded", (event) => {
     fadeOut(document.getElementById("preloader"));
     progressBars();
     navShadowStyle();
-    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        switchMode();
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches && window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+        switchMode(globalMode);
     }
+    window.matchMedia("(prefers-color-scheme: dark)").onchange = function () {
+        if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches && window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+            globalMode = "day-mode";
+        } else {
+            globalMode = "night-mode";
+        }
+        switchMode(globalMode);
+    };
     let modeButtons = document.querySelectorAll("button.mode-toggle");
     modeButtons.forEach(function(element) {
         element.addEventListener('click', () => {
-            switchMode();
+            switchMode(globalMode);
         });
     });
 });
 
-let mode = "day-mode";
+var globalMode = "day-mode";
 
-function switchMode() {
+function switchMode(mode) {
     let root = document.querySelector(":root");
     let coffeeBanners = document.querySelectorAll(".coffee-banner");
     if(mode === "day-mode") {
@@ -26,7 +34,7 @@ function switchMode() {
         coffeeBanners.forEach(function(element) {
             element.classList.add("darken-image");
         });
-        mode = "night-mode";
+        globalMode = "night-mode";
     } else {
         root.style.setProperty("--primary-color", "#2a2a2a");
         root.style.setProperty("--secondary-color", "#eeeeee");
@@ -35,7 +43,7 @@ function switchMode() {
         coffeeBanners.forEach(function (element) {
             element.classList.remove("darken-image");
         });
-        mode = "day-mode";
+        globalMode = "day-mode";
     }
 }
 
