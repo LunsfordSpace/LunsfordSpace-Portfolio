@@ -686,6 +686,16 @@ blockquote span {
     margin: 0 0 1rem 0;
     transition: 2s ease;
 }
+#contact-error {
+    text-align: center;
+    color: red;
+    font-weight: 600;
+}
+#contact-success {
+    text-align: center;
+    padding: 2rem;
+    border: 0.1rem solid var(--secondary-color);
+}
 @media screen and (min-width: 768px) {
     #contact {
         box-shadow: -50vw 0 0 0 var(--secondary-contrast-color) inset;
@@ -694,8 +704,12 @@ blockquote span {
     #contact hr {
         display: none;
     }
-    #contact form {
-        padding-left: 4rem;
+    #contact-form {
+        padding: 2rem;
+    }
+    #contact-success {
+        padding-top: 42%;
+        min-height: 30rem;
     }
 }
 

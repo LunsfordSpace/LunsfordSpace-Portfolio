@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
             switchMode(globalMode);
         });
     });
+    let contactForm = document.getElementById("contact-form");
+    contactForm.addEventListener("submit", getFormSubmit);
 });
 
 var globalMode = "day-mode";
@@ -102,3 +104,55 @@ function progressBars() {
     });
     observer.observe(section);
 };
+
+function getFormSubmit(event) {
+    event.preventDefault();
+    if (document.querySelector('input[name="contactPhone"]').checked === true) {
+        return;
+    }
+    let form = document.getElementById("contact-form");
+    let errorDiv = document.getElementById("contact-error");
+    errorDiv.innerHTML = "";
+    let successDiv = document.getElementById("contact-success");
+    successDiv.innerHTML = "";
+    let name = document.querySelector('input[name="contactName"]').value;
+    let email = document.querySelector('input[name="contactEmail"]').value;
+    let subject = document.querySelector('input[name="contactSubject"]').value;
+    let message = document.querySelector('textarea[name="contactMessage"]').value;
+    let emailRegex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+    if (name === "") {
+        errorDiv.innerHTML = `Please enter your name.<br>`;
+        return;
+    }
+    if (email === "" || !email.match(emailRegex)) {
+        errorDiv.innerHTML = `Please enter a valid email.<br>`;
+        return;
+    }
+    if (subject === "") {
+        errorDiv.innerHTML = `Please enter a subject line.`;
+        return;
+    }
+    if (message === "") {
+        errorDiv.innerHTML = `Please enter your message.`;
+        return;
+    }
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("subject", subject);
+    formData.append("message", message);
+    fetch("https://getform.io/f/975fc68a-af8d-45eb-b34a-57dd98fe8dd1", {
+        method: "POST",
+        body: formData,
+    })
+    .then(() => {
+        successDiv.innerHTML = `<h4>Thank you for reaching out!</h4>
+<h6>I'll respond as soon as I'm able.</h6>`;
+        successDiv.classList.remove("hidden");
+        form.classList.add("hidden");
+    })
+    .catch((error) => {
+        error => console.error(error.message);
+        errorDiv.innerHTML = `There was an error with your submission: ${error.message}`;
+    });
+}
