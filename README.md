@@ -34,9 +34,13 @@
         <a href="https://github.com/LunsfordSpace/LunsfordSpace-Portfolio/blob/master/LICENSE.txt">
             <img src="https://img.shields.io/github/license/LunsfordSpace/LunsfordSpace-Portfolio?color=orange&style=plastic">
         </a>
-        ¨
+        <br>
         <a href="https://linkedin.com/in/LunsfordSpace">
             <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=plastic&logo=linkedin&colorB=2867B2">
+        </a>
+        ¨
+        <a href="https://twitter.com/LunsfordSpace">
+            <img src="https://img.shields.io/badge/-Twitter-black.svg?style=plastic&logo=twitter&logoColor=white&colorB=1DA1F2">
         </a>
     </p>    
 </p>
