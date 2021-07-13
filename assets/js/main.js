@@ -141,7 +141,7 @@ function getFormSubmit(event) {
     formData.append("email", email);
     formData.append("subject", subject);
     formData.append("message", message);
-    fetch("https://getform.io/f/975fc68a-af8d-45eb-b34a-57dd98fe8dd1", {
+    fetch("https://getform.io/f/f92aafa1-68d9-4ebd-9c15-c7aed6b4c120", {
         method: "POST",
         body: formData,
     })
