@@ -613,9 +613,24 @@ blockquote span {
 .resume-item h6 {
     padding-right: 1rem;
 }
+@media screen and (min-width: 991px) {
+    .resume-item {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
 @media screen and (min-width: 767px) and (max-width: 991px) {
     .resume-item h6 {
         font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 767px) {
+    .resume-item h6 {
+        font-size: 0.8rem;
+    }
+    .resume-item {
+        margin-left: -1rem;
+        margin-right: -1rem;
     }
 }
 
